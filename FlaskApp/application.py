@@ -280,13 +280,13 @@ def info():
     return render_template_string("""
             {% extends "main.html" %}
             {% block head %}
-                Instance Info
+                인스턴스 정보
             {% endblock %}
             {% block body %}
-            <b>instance_id</b>: {{g.instance_id}} <br/>
-            <b>availability_zone</b>: {{g.availablity_zone}} <br/>
+            <b>인스턴스 아이디</b>: {{g.instance_id}} <br/>
+            <b>가용 영역</b>: {{g.availablity_zone}} <br/>
             <hr/>
-            <small>Stress cpu:
+            <small>스트레스 CPU:
             <a href="{{ url_for('stress', seconds=60) }}">1 min</a>,
             <a href="{{ url_for('stress', seconds=300) }}">5 min</a>,
             <a href="{{ url_for('stress', seconds=600) }}">10 min</a>
